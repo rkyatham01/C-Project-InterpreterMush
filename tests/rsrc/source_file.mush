@@ -1,0 +1,3 @@
+10 echo "figlet hello" > "tmp/source_file.out"
+11 source "tmp/source_file.out"
+run

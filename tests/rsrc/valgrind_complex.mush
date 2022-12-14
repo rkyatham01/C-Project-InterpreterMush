@@ -1,0 +1,8 @@
+10 echo "Let's start!"
+20 set x = 0
+30 sleep 1
+40 set x = #x + 1
+50 if #x <= 3 goto 30
+60 echo #x
+run
+

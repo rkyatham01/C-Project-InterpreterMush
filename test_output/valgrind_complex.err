@@ -1,0 +1,834 @@
+==3274== Memcheck, a memory error detector
+==3274== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3274== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==3274== Command: bin/mush
+==3274== 
+==3274== Conditional jump or move depends on uninitialised value(s)
+==3274==    at 0x10FDAD: prog_insert (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110318: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274== 
+==3274== Conditional jump or move depends on uninitialised value(s)
+==3274==    at 0x10FD14: prog_insert (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110318: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274== 
+==3274== Invalid write of size 1
+==3274==    at 0x48E827E: __vsprintf_internal (iovsprintf.c:97)
+==3274==    by 0x48C5047: sprintf (sprintf.c:30)
+==3274==    by 0x110F49: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3278== 
+==3278== FILE DESCRIPTORS: 6 open at exit.
+==3274==    by 0x1107A9: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3278== Open file descriptor 13: /dev/shm/bxf_arena_3251 (deleted)
+==3274==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3278==    <inherited from parent>
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==  Address 0x4a5b8a4 is 0 bytes after a block of size 4 alloc'd
+==3278== 
+==3278== Open file descriptor 11: /dev/shm/bxf_arena_3251 (deleted)
+==3274==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3274==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3278==    <inherited from parent>
+==3278== 
+==3274==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x1107A9: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3278== Open file descriptor 4:
+==3278==    <inherited from parent>
+==3274==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3278== 
+==3278== Open file descriptor 2: /home/student/CSE320/rkyatham/hw4/test_output/valgrind_complex.err
+==3274==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3278==    <inherited from parent>
+==3278== 
+==3274== 
+==3274== Invalid read of size 1
+==3278== Open file descriptor 1: /home/student/CSE320/rkyatham/hw4/test_output/valgrind_complex.out
+==3278==    <inherited from parent>
+==3274==    at 0x483EF54: strlen (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3274==    by 0x4902502: strdup (strdup.c:41)
+==3278== 
+==3278== Open file descriptor 0: /home/student/CSE320/rkyatham/hw4/tests/rsrc/valgrind_complex.mush
+==3274==    by 0x1111DB: store_set_string (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11146A: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3278==    <inherited from parent>
+==3278== 
+==3274==    by 0x1107A9: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3278== 
+==3278== HEAP SUMMARY:
+==3278==     in use at exit: 17,635 bytes in 62 blocks
+==3278==   total heap usage: 71 allocs, 9 frees, 21,776 bytes allocated
+==3278== 
+==3274==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3278== LEAK SUMMARY:
+==3278==    definitely lost: 0 bytes in 0 blocks
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==  Address 0x4a5b8a4 is 0 bytes after a block of size 4 alloc'd
+==3278==    indirectly lost: 0 bytes in 0 blocks
+==3278==      possibly lost: 0 bytes in 0 blocks
+==3274==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3274==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3278==    still reachable: 17,635 bytes in 62 blocks
+==3278==         suppressed: 0 bytes in 0 blocks
+==3274==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x1107A9: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3278== Reachable blocks (those to which a pointer was found) are not shown.
+==3278== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==3274==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3278== 
+==3278== Use --track-origins=yes to see where uninitialised values come from
+==3274==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3278== For lists of detected and suppressed errors, rerun with: -s
+==3278== ERROR SUMMARY: 5 errors from 2 contexts (suppressed: 0 from 0)
+==3274== 
+==3274== Invalid read of size 1
+==3274==    at 0x4842B60: memmove (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3274==    by 0x1111DB: store_set_string (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11146A: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x1107A9: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==  Address 0x4a5b8a4 is 0 bytes after a block of size 4 alloc'd
+==3274==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3274==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x1107A9: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274== 
+==3274== Invalid read of size 1
+==3274==    at 0x483EF54: strlen (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3274==    by 0x4902502: strdup (strdup.c:41)
+==3274==    by 0x1113FD: store_set_string (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11146A: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x1107CA: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==  Address 0x4a5ba54 is 0 bytes after a block of size 4 alloc'd
+==3274==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3274==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x1107CA: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274== 
+==3274== Invalid read of size 1
+==3274==    at 0x4842B60: memmove (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3274==    by 0x1113FD: store_set_string (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11146A: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x1107CA: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==  Address 0x4a5ba54 is 0 bytes after a block of size 4 alloc'd
+==3274==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3274==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x1107CA: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274== 
+==3274== Invalid read of size 1
+==3274==    at 0x483EF54: strlen (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3274==    by 0x1112E6: store_set_string (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11146A: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x1107A9: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==  Address 0x4a5bf54 is 0 bytes after a block of size 4 alloc'd
+==3274==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3274==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x1107A9: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274== 
+==3274== Invalid read of size 1
+==3274==    at 0x4842B60: memmove (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3274==    by 0x111301: store_set_string (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11146A: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x1107A9: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==  Address 0x4a5bf54 is 0 bytes after a block of size 4 alloc'd
+==3274==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3274==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x1107A9: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274== 
+==3284== 
+==3284== FILE DESCRIPTORS: 6 open at exit.
+==3284== Open file descriptor 13: /dev/shm/bxf_arena_3251 (deleted)
+==3284==    <inherited from parent>
+==3284== 
+==3284== Open file descriptor 11: /dev/shm/bxf_arena_3251 (deleted)
+==3284==    <inherited from parent>
+==3284== 
+==3284== Open file descriptor 4:
+==3284==    <inherited from parent>
+==3284== 
+==3284== Open file descriptor 2: /home/student/CSE320/rkyatham/hw4/test_output/valgrind_complex.err
+==3284==    <inherited from parent>
+==3284== 
+==3284== Open file descriptor 1: /home/student/CSE320/rkyatham/hw4/test_output/valgrind_complex.out
+==3284==    <inherited from parent>
+==3284== 
+==3284== Open file descriptor 0: /home/student/CSE320/rkyatham/hw4/tests/rsrc/valgrind_complex.mush
+==3284==    <inherited from parent>
+==3284== 
+==3284== 
+==3284== HEAP SUMMARY:
+==3284==     in use at exit: 17,948 bytes in 82 blocks
+==3284==   total heap usage: 91 allocs, 9 frees, 22,089 bytes allocated
+==3284== 
+==3284== 4 bytes in 1 blocks are definitely lost in loss record 6 of 48
+==3284==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3284==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3284==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3284==    by 0x1107A9: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3284==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3284==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3284==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3284==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3284== 
+==3284== 4 bytes in 1 blocks are definitely lost in loss record 7 of 48
+==3284==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3284==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3284==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3284==    by 0x1107CA: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3284==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3284==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3284==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3284==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3284== 
+==3284== 162 (32 direct, 130 indirect) bytes in 1 blocks are definitely lost in loss record 46 of 48
+==3284==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3284==    by 0x112182: copy_pipeline (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3284==    by 0x10F606: jobs_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3284==    by 0x110792: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3284==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3284==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3284==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3284==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3284== 
+==3284== LEAK SUMMARY:
+==3284==    definitely lost: 40 bytes in 3 blocks
+==3284==    indirectly lost: 130 bytes in 7 blocks
+==3284==      possibly lost: 0 bytes in 0 blocks
+==3284==    still reachable: 17,778 bytes in 72 blocks
+==3284==         suppressed: 0 bytes in 0 blocks
+==3284== Reachable blocks (those to which a pointer was found) are not shown.
+==3284== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==3284== 
+==3284== Use --track-origins=yes to see where uninitialised values come from
+==3284== For lists of detected and suppressed errors, rerun with: -s
+==3284== ERROR SUMMARY: 14 errors from 10 contexts (suppressed: 0 from 0)
+==3274== Invalid read of size 1
+==3274==    at 0x483EF54: strlen (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3274==    by 0x1112E6: store_set_string (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11146A: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x1107CA: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==  Address 0x4a5bfa4 is 0 bytes after a block of size 4 alloc'd
+==3274==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3274==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x1107CA: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274== 
+==3274== Invalid read of size 1
+==3274==    at 0x4842B60: memmove (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3274==    by 0x111301: store_set_string (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11146A: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x1107CA: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==  Address 0x4a5bfa4 is 0 bytes after a block of size 4 alloc'd
+==3274==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3274==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x1107CA: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274== 
+==3274== Invalid read of size 1
+==3274==    at 0x483EF54: strlen (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3274==    by 0x1113AB: store_set_string (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11146A: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110689: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==  Address 0x4a5bff1 is 0 bytes after a block of size 1 alloc'd
+==3274==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3274==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110689: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274== 
+==3274== Invalid read of size 2
+==3274==    at 0x4842B30: memmove (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3274==    by 0x1113C6: store_set_string (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11146A: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110689: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==  Address 0x4a5bff0 is 0 bytes inside a block of size 1 alloc'd
+==3274==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3274==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110689: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274== 
+==3296== 
+==3296== FILE DESCRIPTORS: 6 open at exit.
+==3296== Open file descriptor 13: /dev/shm/bxf_arena_3251 (deleted)
+==3296==    <inherited from parent>
+==3296== 
+==3296== Open file descriptor 11: /dev/shm/bxf_arena_3251 (deleted)
+==3296==    <inherited from parent>
+==3296== 
+==3296== Open file descriptor 4:
+==3296==    <inherited from parent>
+==3296== 
+==3296== Open file descriptor 2: /home/student/CSE320/rkyatham/hw4/test_output/valgrind_complex.err
+==3296==    <inherited from parent>
+==3296== 
+==3296== Open file descriptor 1: /home/student/CSE320/rkyatham/hw4/test_output/valgrind_complex.out
+==3296==    <inherited from parent>
+==3296== 
+==3296== Open file descriptor 0: /home/student/CSE320/rkyatham/hw4/tests/rsrc/valgrind_complex.mush
+==3296==    <inherited from parent>
+==3296== 
+==3296== 
+==3296== HEAP SUMMARY:
+==3296==     in use at exit: 18,109 bytes in 93 blocks
+==3296==   total heap usage: 102 allocs, 9 frees, 22,250 bytes allocated
+==3296== 
+==3296== 1 bytes in 1 blocks are definitely lost in loss record 1 of 49
+==3296==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3296==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296==    by 0x110689: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296== 
+==3296== 8 bytes in 2 blocks are definitely lost in loss record 13 of 49
+==3296==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3296==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296==    by 0x1107A9: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296== 
+==3296== 8 bytes in 2 blocks are definitely lost in loss record 14 of 49
+==3296==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3296==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296==    by 0x1107CA: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296== 
+==3296== 314 (64 direct, 250 indirect) bytes in 2 blocks are definitely lost in loss record 48 of 49
+==3296==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3296==    by 0x112182: copy_pipeline (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296==    by 0x10F606: jobs_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296==    by 0x110792: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3296== 
+==3296== LEAK SUMMARY:
+==3296==    definitely lost: 81 bytes in 7 blocks
+==3296==    indirectly lost: 250 bytes in 14 blocks
+==3296==      possibly lost: 0 bytes in 0 blocks
+==3296==    still reachable: 17,778 bytes in 72 blocks
+==3296==         suppressed: 0 bytes in 0 blocks
+==3296== Reachable blocks (those to which a pointer was found) are not shown.
+==3296== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==3296== 
+==3296== Use --track-origins=yes to see where uninitialised values come from
+==3296== For lists of detected and suppressed errors, rerun with: -s
+==3296== ERROR SUMMARY: 24 errors from 17 contexts (suppressed: 0 from 0)
+==3305== 
+==3305== FILE DESCRIPTORS: 6 open at exit.
+==3305== Open file descriptor 13: /dev/shm/bxf_arena_3251 (deleted)
+==3305==    <inherited from parent>
+==3305== 
+==3305== Open file descriptor 11: /dev/shm/bxf_arena_3251 (deleted)
+==3305==    <inherited from parent>
+==3305== 
+==3305== Open file descriptor 4:
+==3305==    <inherited from parent>
+==3305== 
+==3305== Open file descriptor 2: /home/student/CSE320/rkyatham/hw4/test_output/valgrind_complex.err
+==3305==    <inherited from parent>
+==3305== 
+==3305== Open file descriptor 1: /home/student/CSE320/rkyatham/hw4/test_output/valgrind_complex.out
+==3305==    <inherited from parent>
+==3305== 
+==3305== Open file descriptor 0: /home/student/CSE320/rkyatham/hw4/tests/rsrc/valgrind_complex.mush
+==3305==    <inherited from parent>
+==3305== 
+==3305== 
+==3305== HEAP SUMMARY:
+==3305==     in use at exit: 18,270 bytes in 104 blocks
+==3305==   total heap usage: 113 allocs, 9 frees, 22,411 bytes allocated
+==3305== 
+==3305== 2 bytes in 2 blocks are definitely lost in loss record 5 of 49
+==3305==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3305==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305==    by 0x110689: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305== 
+==3305== 12 bytes in 3 blocks are definitely lost in loss record 13 of 49
+==3305==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3305==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305==    by 0x1107A9: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305== 
+==3305== 12 bytes in 3 blocks are definitely lost in loss record 14 of 49
+==3305==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3305==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305==    by 0x1107CA: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305== 
+==3305== 466 (96 direct, 370 indirect) bytes in 3 blocks are definitely lost in loss record 48 of 49
+==3305==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3305==    by 0x112182: copy_pipeline (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305==    by 0x10F606: jobs_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305==    by 0x110792: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3305== 
+==3305== LEAK SUMMARY:
+==3305==    definitely lost: 122 bytes in 11 blocks
+==3305==    indirectly lost: 370 bytes in 21 blocks
+==3305==      possibly lost: 0 bytes in 0 blocks
+==3305==    still reachable: 17,778 bytes in 72 blocks
+==3305==         suppressed: 0 bytes in 0 blocks
+==3305== Reachable blocks (those to which a pointer was found) are not shown.
+==3305== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==3305== 
+==3305== Use --track-origins=yes to see where uninitialised values come from
+==3305== For lists of detected and suppressed errors, rerun with: -s
+==3305== ERROR SUMMARY: 33 errors from 17 contexts (suppressed: 0 from 0)
+==3307== 
+==3307== FILE DESCRIPTORS: 6 open at exit.
+==3307== Open file descriptor 13: /dev/shm/bxf_arena_3251 (deleted)
+==3307==    <inherited from parent>
+==3307== 
+==3307== Open file descriptor 11: /dev/shm/bxf_arena_3251 (deleted)
+==3307==    <inherited from parent>
+==3307== 
+==3307== Open file descriptor 4:
+==3307==    <inherited from parent>
+==3307== 
+==3307== Open file descriptor 2: /home/student/CSE320/rkyatham/hw4/test_output/valgrind_complex.err
+==3307==    <inherited from parent>
+==3307== 
+==3307== Open file descriptor 1: /home/student/CSE320/rkyatham/hw4/test_output/valgrind_complex.out
+==3307==    <inherited from parent>
+==3307== 
+==3307== Open file descriptor 0: /home/student/CSE320/rkyatham/hw4/tests/rsrc/valgrind_complex.mush
+==3307==    <inherited from parent>
+==3307== 
+==3307== 
+==3307== HEAP SUMMARY:
+==3307==     in use at exit: 18,431 bytes in 115 blocks
+==3307==   total heap usage: 124 allocs, 9 frees, 22,572 bytes allocated
+==3307== 
+==3307== 3 bytes in 3 blocks are definitely lost in loss record 5 of 49
+==3307==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3307==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307==    by 0x110689: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307== 
+==3307== 16 bytes in 4 blocks are definitely lost in loss record 17 of 49
+==3307==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3307==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307==    by 0x1107A9: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307== 
+==3307== 16 bytes in 4 blocks are definitely lost in loss record 18 of 49
+==3307==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3307==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307==    by 0x1107CA: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307== 
+==3307== 618 (128 direct, 490 indirect) bytes in 4 blocks are definitely lost in loss record 48 of 49
+==3307==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3307==    by 0x112182: copy_pipeline (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307==    by 0x10F606: jobs_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307==    by 0x110792: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3307== 
+==3307== LEAK SUMMARY:
+==3307==    definitely lost: 163 bytes in 15 blocks
+==3307==    indirectly lost: 490 bytes in 28 blocks
+==3307==      possibly lost: 0 bytes in 0 blocks
+==3307==    still reachable: 17,778 bytes in 72 blocks
+==3307==         suppressed: 0 bytes in 0 blocks
+==3307== Reachable blocks (those to which a pointer was found) are not shown.
+==3307== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==3307== 
+==3307== Use --track-origins=yes to see where uninitialised values come from
+==3307== For lists of detected and suppressed errors, rerun with: -s
+==3307== ERROR SUMMARY: 42 errors from 17 contexts (suppressed: 0 from 0)
+==3316== Use of uninitialised value of size 8
+==3316==    at 0x483FED4: strcmp (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3316==    by 0x110F8E: store_get_string (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110D9F: eval_to_string (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x10F795: jobs_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110792: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316== 
+==3316== Invalid read of size 1
+==3316==    at 0x483FED4: strcmp (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3316==    by 0x110F8E: store_get_string (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110D9F: eval_to_string (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x10F795: jobs_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110792: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==3316== 
+==3316== 
+==3316== Process terminating with default action of signal 11 (SIGSEGV)
+==3316==  Access not within mapped region at address 0x0
+==3316==    at 0x483FED4: strcmp (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3316==    by 0x110F8E: store_get_string (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110D9F: eval_to_string (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x10F795: jobs_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110792: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==  If you believe this happened as a result of a stack
+==3316==  overflow in your program's main thread (unlikely but
+==3316==  possible), you can try to increase the size of the
+==3316==  main thread stack using the --main-stacksize= flag.
+==3316==  The main thread stack size used in this run was 8388608.
+==3316== 
+==3316== FILE DESCRIPTORS: 6 open at exit.
+==3316== Open file descriptor 13: /dev/shm/bxf_arena_3251 (deleted)
+==3316==    <inherited from parent>
+==3316== 
+==3316== Open file descriptor 11: /dev/shm/bxf_arena_3251 (deleted)
+==3316==    <inherited from parent>
+==3316== 
+==3316== Open file descriptor 4:
+==3316==    <inherited from parent>
+==3316== 
+==3316== Open file descriptor 2: /home/student/CSE320/rkyatham/hw4/test_output/valgrind_complex.err
+==3316==    <inherited from parent>
+==3316== 
+==3316== Open file descriptor 1: /home/student/CSE320/rkyatham/hw4/test_output/valgrind_complex.out
+==3316==    <inherited from parent>
+==3316== 
+==3316== Open file descriptor 0: /home/student/CSE320/rkyatham/hw4/tests/rsrc/valgrind_complex.mush
+==3316==    <inherited from parent>
+==3316== 
+==3316== 
+==3316== HEAP SUMMARY:
+==3316==     in use at exit: 22,687 bytes in 127 blocks
+==3316==   total heap usage: 135 allocs, 8 frees, 22,732 bytes allocated
+==3316== 
+==3316== 4 bytes in 4 blocks are definitely lost in loss record 6 of 50
+==3316==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3316==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110689: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316== 
+==3316== 20 bytes in 5 blocks are definitely lost in loss record 17 of 50
+==3316==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3316==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x1107A9: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316== 
+==3316== 20 bytes in 5 blocks are definitely lost in loss record 18 of 50
+==3316==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3316==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x1107CA: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316== 
+==3316== 770 (160 direct, 610 indirect) bytes in 5 blocks are definitely lost in loss record 48 of 50
+==3316==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3316==    by 0x112182: copy_pipeline (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x10F606: jobs_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110792: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3316== 
+==3316== LEAK SUMMARY:
+==3316==    definitely lost: 204 bytes in 19 blocks
+==3316==    indirectly lost: 610 bytes in 35 blocks
+==3316==      possibly lost: 0 bytes in 0 blocks
+==3316==    still reachable: 21,873 bytes in 73 blocks
+==3316==         suppressed: 0 bytes in 0 blocks
+==3316== Reachable blocks (those to which a pointer was found) are not shown.
+==3316== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==3316== 
+==3316== Use --track-origins=yes to see where uninitialised values come from
+==3316== For lists of detected and suppressed errors, rerun with: -s
+==3316== ERROR SUMMARY: 53 errors from 19 contexts (suppressed: 0 from 0)
+==3315== 
+==3315== FILE DESCRIPTORS: 6 open at exit.
+==3315== Open file descriptor 13: /dev/shm/bxf_arena_3251 (deleted)
+==3315==    <inherited from parent>
+==3315== 
+==3315== Open file descriptor 11: /dev/shm/bxf_arena_3251 (deleted)
+==3315==    <inherited from parent>
+==3315== 
+==3315== Open file descriptor 4:
+==3315==    <inherited from parent>
+==3315== 
+==3315== Open file descriptor 2: /home/student/CSE320/rkyatham/hw4/test_output/valgrind_complex.err
+==3315==    <inherited from parent>
+==3315== 
+==3315== Open file descriptor 1: /home/student/CSE320/rkyatham/hw4/test_output/valgrind_complex.out
+==3315==    <inherited from parent>
+==3315== 
+==3315== Open file descriptor 0: /home/student/CSE320/rkyatham/hw4/tests/rsrc/valgrind_complex.mush
+==3315==    <inherited from parent>
+==3315== 
+==3315== 
+==3315== HEAP SUMMARY:
+==3315==     in use at exit: 18,591 bytes in 126 blocks
+==3315==   total heap usage: 135 allocs, 9 frees, 22,732 bytes allocated
+==3315== 
+==3315== 4 bytes in 4 blocks are definitely lost in loss record 6 of 49
+==3315==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3315==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315==    by 0x110689: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315== 
+==3315== 20 bytes in 5 blocks are definitely lost in loss record 17 of 49
+==3315==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3315==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315==    by 0x1107A9: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315== 
+==3315== 20 bytes in 5 blocks are definitely lost in loss record 18 of 49
+==3315==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3315==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315==    by 0x1107CA: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315== 
+==3315== 770 (160 direct, 610 indirect) bytes in 5 blocks are definitely lost in loss record 48 of 49
+==3315==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3315==    by 0x112182: copy_pipeline (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315==    by 0x10F606: jobs_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315==    by 0x110792: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3315== 
+==3315== LEAK SUMMARY:
+==3315==    definitely lost: 204 bytes in 19 blocks
+==3315==    indirectly lost: 610 bytes in 35 blocks
+==3315==      possibly lost: 0 bytes in 0 blocks
+==3315==    still reachable: 17,777 bytes in 72 blocks
+==3315==         suppressed: 0 bytes in 0 blocks
+==3315== Reachable blocks (those to which a pointer was found) are not shown.
+==3315== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==3315== 
+==3315== Use --track-origins=yes to see where uninitialised values come from
+==3315== For lists of detected and suppressed errors, rerun with: -s
+==3315== ERROR SUMMARY: 51 errors from 17 contexts (suppressed: 0 from 0)
+STOP (end of program)
+==3274== 
+==3274== FILE DESCRIPTORS: 6 open at exit.
+==3274== Open file descriptor 13: /dev/shm/bxf_arena_3251 (deleted)
+==3274==    <inherited from parent>
+==3274== 
+==3274== Open file descriptor 11: /dev/shm/bxf_arena_3251 (deleted)
+==3274==    <inherited from parent>
+==3274== 
+==3274== Open file descriptor 4:
+==3274==    <inherited from parent>
+==3274== 
+==3274== Open file descriptor 2: /home/student/CSE320/rkyatham/hw4/test_output/valgrind_complex.err
+==3274==    <inherited from parent>
+==3274== 
+==3274== Open file descriptor 1: /home/student/CSE320/rkyatham/hw4/test_output/valgrind_complex.out
+==3274==    <inherited from parent>
+==3274== 
+==3274== Open file descriptor 0: /home/student/CSE320/rkyatham/hw4/tests/rsrc/valgrind_complex.mush
+==3274==    <inherited from parent>
+==3274== 
+==3274== 
+==3274== HEAP SUMMARY:
+==3274==     in use at exit: 2,141 bytes in 125 blocks
+==3274==   total heap usage: 137 allocs, 12 frees, 22,740 bytes allocated
+==3274== 
+==3274== 4 bytes in 4 blocks are definitely lost in loss record 6 of 46
+==3274==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3274==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110689: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274== 
+==3274== 24 bytes in 6 blocks are definitely lost in loss record 19 of 46
+==3274==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3274==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x1107A9: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274== 
+==3274== 24 bytes in 6 blocks are definitely lost in loss record 20 of 46
+==3274==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3274==    by 0x110F29: LongtoStringConverter (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x111453: store_set_int (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x1107CA: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274== 
+==3274== 770 (160 direct, 610 indirect) bytes in 5 blocks are definitely lost in loss record 46 of 46
+==3274==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3274==    by 0x112182: copy_pipeline (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x10F606: jobs_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110792: exec_stmt (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110500: exec_cont (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x11042E: exec_run (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110346: exec_interactive (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274==    by 0x110EBB: main (in /home/student/CSE320/rkyatham/hw4/bin/mush)
+==3274== 
+==3274== LEAK SUMMARY:
+==3274==    definitely lost: 212 bytes in 21 blocks
+==3274==    indirectly lost: 610 bytes in 35 blocks
+==3274==      possibly lost: 0 bytes in 0 blocks
+==3274==    still reachable: 1,319 bytes in 69 blocks
+==3274==         suppressed: 0 bytes in 0 blocks
+==3274== Reachable blocks (those to which a pointer was found) are not shown.
+==3274== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==3274== 
+==3274== Use --track-origins=yes to see where uninitialised values come from
+==3274== For lists of detected and suppressed errors, rerun with: -s
+==3274== ERROR SUMMARY: 57 errors from 17 contexts (suppressed: 0 from 0)
